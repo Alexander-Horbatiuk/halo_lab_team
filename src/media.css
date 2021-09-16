@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+    .main {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .cards_content {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .cards_content{
+        justify-content: center;
+    }
+}

@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import DataServer from "./DataServer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <header className="app_header">
+                <span>Welcome</span>
+            </header>
+            <main className="main">
+                <section className="cards_content">
+                    <DataServer />
+                </section>
+            </main>
+        </div>
+    );
 }
 
 export default App;

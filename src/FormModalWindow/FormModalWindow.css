@@ -1,0 +1,91 @@
+.modal_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.error_label  {
+    width: 100%;
+    text-transform: initial;
+    color: red;
+    font-size: 12px;
+    position: relative;
+}
+
+.error_label>.error_title{
+    color: #000;
+    font-size: 18px;
+}
+
+.clear_input_button {
+    width: 20px;
+    height: 20px;
+    background: red;
+    color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 15px;
+}
+
+
+.modal_form,
+.card_price {
+    margin: 0;
+}
+
+.modal_form_input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal_form_button {
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    background: #4BCFA0;
+    border-radius: 16px;
+    border: none;
+    padding: 15px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card_button_close {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    font-size: 25px;
+    transform: rotate(45deg);
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    background: #e0dfdf;
+    border-radius: 50%;
+    border: none;
+    transition: .5s;
+}
+
+.card_button_close:hover{
+    background: #e29999;
+    transform: rotate(-45deg);
+}
