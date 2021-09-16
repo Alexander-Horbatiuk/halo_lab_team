@@ -41,6 +41,7 @@ const FormModalWindow = (props) => {
     const submit = () => {
         if (!errorPhone === !errorName && name !== '' && phone !== '') {
             console.log( [prices, categories, names, name, phone])
+            onClick()
         }
     }
 

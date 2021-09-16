@@ -21,7 +21,6 @@ const customStyles = {
         height: '536px',
         width: '100%',
         position: 'static',
-        // position: 'relative',
         overflow: 'visible',
     },
 };
@@ -41,7 +40,6 @@ const ModalWindow = (props) => {
                 isOpen={modalIsOpen}
                 style={customStyles}
             >
-                {/*<button className="card_button_close" onClick={closeModal}>+</button>*/}
                 <FormModalWindow names={name} prices={price} onClick={closeModal} categories={category} />
             </Modal>
         </>
