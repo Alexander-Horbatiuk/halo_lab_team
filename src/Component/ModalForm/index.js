@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import "./FormModalWindow.css"
-import "../media.css"
+import "../../media.css"
 
-const FormModalWindow = (props) => {
-    const {names, prices, categories, onClick} = props
+
+const ModalForm = ({names, prices, categories, closeModal}) => {
 
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
@@ -41,11 +41,11 @@ const FormModalWindow = (props) => {
     const submit = () => {
         if (!errorPhone === !errorName && name !== '' && phone !== '') {
             console.log( [prices, categories, names, name, phone])
-            onClick()
+            closeModal()
         }
     }
 
-    const clearInputNane = () => {
+    const clearInputName = () => {
         setName('')
         setErrorName('')
     }
@@ -57,21 +57,20 @@ const FormModalWindow = (props) => {
 
     return (
         <form className="modal_form" action="">
-            <span className="card_category">{categories}</span>
-            <p className="card_title">{names}</p>
-            <p className="card_price">{prices}</p>
-
+            <span className="card_category">{categories.category}</span>
+            <p className="card_title">{names.name}</p>
+            <p className="card_price">{prices.price}</p>
 
             <label className="error_label">
                 {errorName? <span className="error_title">Error</span>: ''}
 
-                {errorName && <span className="clear_input_button" onClick={clearInputNane}>+</span>}
+                {errorName && <span className="clear_input_button" onClick={clearInputName}>+</span>}
                 <input type="text"
-                       value={name}
-                       onBlur={validateName}
-                       placeholder="Name"
-                       className="modal_form_input"
-                       onChange={e => setName(e.target.value)}
+                        value={name}
+                        onBlur={validateName}
+                        placeholder="Name"
+                        className="modal_form_input"
+                        onChange={e => setName(e.target.value)}
                 />
                 {errorName? errorName: ''}
             </label>
@@ -90,7 +89,7 @@ const FormModalWindow = (props) => {
                 {errorPhone? errorPhone: ''}
             </label>
 
-            <button className="card_button_close" onClick={onClick}>+</button>
+            <button className="card_button_close" onClick={closeModal}>+</button>
 
             <div onClick={submit} className="modal_form_button">
                 Order
@@ -100,4 +99,4 @@ const FormModalWindow = (props) => {
     )
 };
 
-export default FormModalWindow;
+export default ModalForm;

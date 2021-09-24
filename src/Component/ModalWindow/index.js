@@ -1,8 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import "./ModalWindow.css";
-import "../media.css"
-import FormModalWindow from "../FormModalWindow";
+import "../../media.css"
+import ModalForm from "../ModalForm";
 
 Modal.setAppElement(document.getElementById('root'));
 
@@ -25,22 +25,16 @@ const customStyles = {
     },
 };
 
-const ModalWindow = (props) => {
-    const { name, price, category} = props
-
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    const  openModal = () => setIsOpen(true);
-    const closeModal = () => setIsOpen(false);
+const ModalWindow = ({showModalOpen, modalIsOpen, showModalClose, contentModal}) => {
 
     return (
         <>
-            <button onClick={openModal} className="card_button">Buy</button>
             <Modal
-                addClick={openModal}
+                addClick={showModalOpen}
                 isOpen={modalIsOpen}
                 style={customStyles}
             >
-                <FormModalWindow names={name} prices={price} onClick={closeModal} categories={category} />
+                <ModalForm names={contentModal} prices={contentModal} onClick={showModalClose} categories={contentModal} />
             </Modal>
         </>
     );

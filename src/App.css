@@ -18,16 +18,31 @@
   background: #E5E5E5;
   padding: 50px;
   max-width: 1200px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 .cards_content{
   max-width: 1200px ;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   row-gap: 25px;
+  margin-bottom: 50px;
+}
+
+.card_button_min_value {
+  color: #fff;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  padding: 10px 50px;
+  border-radius: 15px;
+  border: none;
+  background: #50DAA8;
+  box-sizing: border-box;
 }
 
